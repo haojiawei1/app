@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/swiper-3.4.0.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <link rel="stylesheet" href="js/animate.min.css">
+    <link rel="stylesheet" href="js/swiper-3.4.0.min.css">
+    <script>
+    function resize(originSize,type){
+
+
+    var type=type||"x";
+    if(type=="x"){
+    var widths=document.documentElement.clientWidth;
+    var scale=widths/originSize*100;
+    }else if(type=="y"){
+    var heights=document.documentElement.clientHeight;
+    var scale=heights/originSize*100;
+    }
+
+    document.getElementsByTagName("html")[0].style.fontSize=scale+"px"
+    }
+    </script>
+    <style>
+       html,body{
+           padding:0;
+           margin:0;
+           width:100%;
+           height:100%;
+       }
+       .swiper-container{
+           width:100%;
+           height:100%;
+       }
+        .swiper-slide:nth-child(1){
+            width:100%;
+            height:100%;
+            background:url(image/bg1.png);
+            background-size: contain;
+            position: relative;
+        }
+       .swiper-slide:nth-child(2){
+           width:100%;
+           height:100%;
+           background:url(image/bg2.png);
+           background-size: contain;
+           position: relative;
+       }
+       .swiper-slide:nth-child(3){
+           width:100%;
+           height:100%;
+           background:url(image/bg3.png);
+           background-size: cover;
+           position: relative;
+       }
+        .swiper-slide span:nth-of-type(1){
+             font-size: 0.82rem;
+             position: absolute;
+             top:1.26rem;
+             left: 0.35rem;
+             font-family:微软雅黑;
+             color: #fff;
+            font-weight: bold;
+         }
+       .swiper-slide span:nth-of-type(2){
+           font-size: 0.46rem;
+           position: absolute;
+           top:2.62rem;
+           left:2.05rem;
+           font-family:微软雅黑;
+           color: #fff;
+       }
+        .nav img{
+            width: 100%;
+            height:0.4rem;
+            position: fixed;
+            top:0;
+            left:0;
+            z-index: 100;
+        }
+        .bot img{
+            width: 100%;
+            height:2.93rem;
+            position: absolute;
+            bottom:0;
+            left:0;
+            z-index: 100;
+        }
+        .phone img{
+            width:4.25rem;
+            height:7.15rem;
+            position: absolute;
+            top:3.6rem;
+            left:1.65rem;
+        }
+      
+        .music img:nth-child(1){
+            width:0.62rem;
+            height:0.51rem;
+            position: absolute;
+            top:1.26rem;
+            right:1.65rem;
+        }
+       .music img:nth-child(2){
+           width:0.86rem;
+           height:0.71rem;
+           position: absolute;
+           top:3.91rem;
+           right:0.65rem;
+       }
+       .music img:nth-child(3){
+           width:0.86rem;
+           height:0.71rem;
+           position: absolute;
+           bottom:4.08rem;
+           left:0.91rem;
+
+       }
+        .yun img{
+            width:100%;
+            height:4.9rem;
+            position: absolute;
+            left:0;
+            bottom:3.46rem;
+        }
+        .yun .yun2{
+            width:100%;
+            height:3.59rem;
+            position: absolute;
+            left:0;
+            bottom:3.91rem;
+        }
+       .yun .yun3{
+           width:100%;
+           height:2.11rem;
+           position: absolute;
+           left:0;
+           top:4.01rem;
+           /*z-index: ;*/
+       }
+
+    </style>
+</head>
+<body>
+<div class="nav">
+    <img src="image/top.png" alt="">
+</div>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+
+            <div class="yun">
+                <img src="image/yun1.png" alt="">
+            </div>
+            <div class="music">
+                <img src="image/music1.png" alt="" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+                <img src="image/music2.png" alt="" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+                <img src="image/music3.png" alt="" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+            </div>
+            <span class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.3s">歌单发源地</span>
+            <span class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="1s">随时随地淘到好音乐</span>
+            <div class="phone">
+                <img src="image/phone1.png" alt=""  class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.1s">
+                
+            </div>
+            <div class="bot">
+                <img src="image/bot1.png" alt="" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="yun">
+                <img src="image/yun2.png" alt="" class="yun2">
+            </div>
+            <div class="music">
+                <img src="image/music1.png" alt="" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                <img src="image/music2.png" alt="" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+                <img src="image/music3.png" alt="" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+            </div>
+            <span class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.3s">歌词表</span>
+            <span class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="1s">随时随地的极致享受</span>
+            <div class="phone">
+                <img src="image/phone2.png" alt="" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.1s">
+            </div>
+            <div class="bot">
+                <img src="image/bot1.png" alt="" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="yun">
+                <img src="image/yun3.png" alt="" class="yun3">
+            </div>
+            <div class="music">
+                <img src="image/music1.png" alt="" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+                <img src="image/music2.png" alt="" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+                <img src="image/music3.png" alt="" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">
+            </div>
+            <span class="ani" swiper-animate-effect="bounceInLeft" swiper-animate-duration="1s" swiper-animate-delay="0.3s">音乐圈</span>
+            <span class="ani" swiper-animate-effect="bounceIn" swiper-animate-duration="0.5s" swiper-animate-delay="1s">我和你不到一首歌的距离</span>
+            <div class="phone">
+                <img src="image/phone3.png" alt="" class="ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1s" swiper-animate-delay="0.1s">
+            </div>
+            <div class="bot">
+                <img src="image/bot1.png" alt="" class="ani" swiper-animate-effect="fadeInUp" swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
+            </div>
+        </div>
+    </div>
+    <!--<div class="swiper-pagination"></div>-->
+</div>
+</body>
+<script>
+    var mySwiper = new Swiper('.swiper-container',{
+
+        watchSlidesProgress : true,
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    })
+    resize(750);
+</script>
+
+</html>
